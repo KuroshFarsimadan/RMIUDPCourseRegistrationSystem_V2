@@ -1,0 +1,195 @@
+						if (isAdvisor) {
+						
+					} else {
+						studentClientHandler(personID, department, isAdvisor);
+					}
+	
+	
+	
+	/* 
+	public static void studentClientHandler(String personID, String department, boolean isAdvisor) {
+		System.out.println("Student handler invoked");
+
+		// The below int corresponds to a particular method. Both advisor and student
+		// has 3 available methods to choose from
+		int choose = 0;
+
+		do {
+			System.out.println(
+					"Please choose one of the following available remote service methods by pressing corresponding numeric value:");
+			System.out.println("1. Enrol to a course");
+			System.out.println("2. Get class schedule");
+			System.out.println("3. Drop a course");
+
+			choose = input.nextInt();
+
+			if (choose != 1 && choose != 2 && choose != 3) {
+				System.out.println("Sorry, but the method is not recognized. Please try again.");
+			}
+
+		} while (choose != 1 && choose != 2 && choose != 3);
+
+		// String personID, String department, int method
+		callRMIService(personID, department, choose, isAdvisor);
+
+	}
+
+	public static void advisorClientHandler(String personID, String department, boolean isAdvisor) {
+		System.out.println("Advisor handler invoked");
+
+		// The below int corresponds to a particular method. Both advisor and student
+		// has 3 available methods to choose from
+		int choose = 0;
+
+		do {
+			System.out.println(
+					"Please choose one of the following available remote service methods by pressing corresponding numeric value:");
+			System.out.println("1. Add a course");
+			System.out.println("2. Remove a course");
+			System.out.println("3. List course availability");
+
+			choose = input.nextInt();
+
+			if (choose != 1 && choose != 2 && choose != 3) {
+				System.out.println("Sorry, but the method is not recognized. Please try again.");
+			}
+
+		} while (choose != 1 && choose != 2 && choose != 3);
+
+		// String personID, String department, int method
+		callRMIService(personID, department, choose, isAdvisor);
+
+	} */
+
+
+
+
+
+
+
+
+
+					/*
+				 * String stringMessage = "" + exportedObj.semesterCourses(new
+				 * String(request.getData()).toUpperCase());
+				 */
+				// System.out.println(exportedObj.semesterCourses(new
+				// String(request.getData()).toUpperCase())); // new
+				// String(request.getData()))
+		
+				// Thread thread3 = new Thread(task3);
+		// thread3.start();
+		// Test class and method
+		// Test tester = new Test();
+		// tester.testMethods();
+		/*
+		 * Runnable task3 = () -> { try { ServerImpl exportedObj2 = new ServerImpl();
+		 * System.out.println(exportedObj2.semesterCourses("WINTER")); } catch
+		 * (RemoteException e) { // TODO Auto-generated catch block e.printStackTrace();
+		 * } };
+		 */
+
+		/*
+		 * Runnable task3 = () -> {
+		 * 
+		 * System.out.println("Going to try the UDP"); try { exportedObj = new
+		 * ServerImpl(); exportedObj.listCourseAvailability("Winter"); } catch
+		 * (RemoteException e) {e.printStackTrace();
+		 * } };
+		 */
+
+
+			// Student has taken the course
+			if (student.get(studentID) != null) {
+				counter += 1;
+			}
+			/*
+			 * else { // System.out.println("Student has NOT taken the course"); }
+			 */	
+	
+	
+		// message = s.logger("Get class schedule (student)", "studentID = " +
+		// studentID, requestState, message);
+
+		System.out.println(courseRecords);
+		courseRecords.get("WINTER").put("SOEN349", "This is the details");
+		System.out.println(courseRecords);
+		courseRecords.get("WINTER").put("SOEN349", "This is the modified detail");
+		System.out.println(courseRecords);
+		/*
+		 * for (Map.Entry me : courseRecords.entrySet()) { System.out.println("Record: "
+		 * + me.getKey() + " " + me);
+		 * 
+		 * HashMap<String, HashMap> courseRow = courseRecords.get(me.getKey());
+		 * 
+		 * for (Entry<String, HashMap> me2 : courseRow.entrySet()) {
+		 * 
+		 * System.out.println("Record 2: " + me2.getKey() + " " + me2); HashMap<String,
+		 * HashMap> courseDetails = courseRow.get(me2.getKey());
+		 * 
+		 * for (Entry<String, HashMap> me3 : courseDetails.entrySet()) {
+		 * 
+		 * System.out.println("Record 3: " + me3.getKey() + " " + me3); if
+		 * (me.getKey().toString().equalsIgnoreCase("WINTER")) {
+		 * System.out.println("WINTER FOUND"); if
+		 * (me3.getKey().toString().equalsIgnoreCase("RegisteredStudents")) {
+		 * System.out.println("REGISTERED STUDENTS FOUND");
+		 * 
+		 * courseDetails.get(me3.getKey()).putIfAbsent("Blabla", "Blablabla"); } }
+		 * 
+		 * }
+		 * 
+		 * }
+		 * 
+		 * }
+		 */
+/*
+		for (Map.Entry me : courseRecords.entrySet()) {
+			System.out.println("Record: " + me.getKey() + " " + me);
+
+			HashMap<String, HashMap> courseRow = courseRecords.get(me.getKey());
+
+			for (Entry<String, HashMap> me2 : courseRow.entrySet()) {
+
+				System.out.println("Record 2: " + me2.getKey() + " " + me2);
+				HashMap<String, HashMap> courseDetails = courseRow.get(me2.getKey());
+
+				for (Entry<String, HashMap> me3 : courseDetails.entrySet()) {
+
+					HashMap<String, HashMap> registeredStudents = new HashMap<String, HashMap>();
+					HashMap<String, HashMap> information = new HashMap<String, HashMap>();
+					HashMap<String, HashMap> capacity = new HashMap<String, HashMap>();
+
+					System.out.println("Record 3: " + me3.getKey() + " " + me3);
+
+					if (me.getKey().toString().equalsIgnoreCase("WINTER")) {
+
+						if (me2.getKey().toString().equalsIgnoreCase("SOEN349")) {
+							if (me3.getKey().toString().equalsIgnoreCase("RegisteredStudents")) {
+								registeredStudents.put(me3.getKey(), me3.getValue());
+
+								registeredStudents.get(me3.getKey()).put("newValue", "Blabla");
+								// registeredStudents.put("newValue", "Ha ha ha");
+								System.out.println("This " + registeredStudents);
+							}
+							if (me3.getKey().toString().equalsIgnoreCase("Capacity")) {
+								capacity.put(me3.getKey(), me3.getValue());
+
+								System.out.println("This " + information);
+							}
+							if (me3.getKey().toString().equalsIgnoreCase("Information")) {
+								information.put(me3.getKey(), me3.getValue());
+								System.out.println("This " + capacity);
+							}
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+		System.out.println("MASSIVE TEST " + courseRecords);
+		
+		*/

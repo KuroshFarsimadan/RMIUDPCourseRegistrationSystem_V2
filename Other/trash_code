@@ -1,0 +1,29 @@
+	public CallbackServerImpl() throws RemoteException {
+		super();
+		clientList = new Vector();
+
+		// Each term can have ..* courses
+		HashMap<String, HashMap> course = new HashMap<String, HashMap>();
+		
+		// Each course can have ..* course information fields
+		HashMap<String, HashMap<String, String>> courseInformation = new HashMap<String,HashMap<String, String>>();
+		
+		// Each course can have 0..* students
+		HashMap<String, String> students = new HashMap<String, String>();
+		students.put("SOENS1234", "Kurosh Farsimadan");
+		
+		
+		courseInformation.get("Capacity").put("TotalCapacity", "3");
+		courseInformation.get("Capacity").put("Registered", "1");
+		
+		
+		courseInformation.get("Information").put("Details", "This is testing material");
+		
+		courseInformation.put("RegisteredStudents", students);
+		
+		course.put("SOEN1234", courseInformation);
+		
+		courseRecords.put("WINTER", course);
+	
+
+	}

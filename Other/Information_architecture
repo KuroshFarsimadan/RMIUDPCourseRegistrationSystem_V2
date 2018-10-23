@@ -1,0 +1,62 @@
+3 different departments
+
+	- General to all
+	
+		- All servers maintains a log file containing all of the history of all the operations that have been
+		  performed on the particular server
+		  	- One file per server
+		  	- The information contained in the file 
+		  		- Date and time of the request sent
+		  		- CRUD type
+		  			- Enrol in a course
+		  			- Drop a course
+		  		- Request parameters
+		  			- studentID, courseID, and so on
+		  		- Request state
+		  			- Sucessful
+		  			- Failed
+		  			- Pending
+		  		- Server response for particular request
+		  		
+		- All clients maintain log files for each user inside a folder
+			- Folder naming is student id
+			- 1 file per folder
+			
+		- Student course enrollment
+			- Data record constraints and rules
+				- A HashMap used
+					- HashMap name is CourseRecords
+						- Key = Term
+						- Value = HashMap
+							- Key = Course
+							- Value = HashMap
+								- Key = Capacity, Course Information, Registered Students
+			- A student can enroll...
+				- at any course offered by any department, but...
+				- Cannot enroll in more than 3 courses
+				- Only 2 outside department courses can be chosen if available
+				- If available, can enroll into 3 courses inside own department
+			- Has 3 semesters
+				- FALL
+				- WINTER
+				- SUMMER
+	- COMP
+		- In total, the system has 3 users
+			- 2 students, 1 advisor
+		- Person identifiers made up of 4 digits
+			- Program advisor unique identifier = COMPA1111
+			- Student unique identifier = COMPS1111
+			
+	- SOEN
+		- In total, the system has 3 users
+			- 2 students, 1 advisor
+		- Person identifiers made up of 4 digits
+			- Program advisor unique identifier = SOENA1111
+			- Student unique identifier = SOENS1111
+			
+	- INSE
+		- In total, the system has 3 users
+			- 2 students, 1 advisor
+		- Person identifiers made up of 4 digits
+			- Program advisor unique identifier = INSEA1111
+			- Student unique identifier = INSES1111

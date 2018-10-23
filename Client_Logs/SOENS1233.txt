@@ -1,0 +1,2 @@
+
+Logged request date: 10/12/2018 18:18 | Request type: Enrol to a course | Server response: The student SOENS1233 is registered for the course SOEN1234

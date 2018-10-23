@@ -1,0 +1,5 @@
+
+Logged request date: 10/15/2018 22:54 | Request type: Add a course | Server response: A new course SOEN6340 has been added for WINTER semester
+Logged request date: 10/15/2018 22:54 | Request type: List course availability | Server response:  WINTER - COMP1234 null, WINTER - INSE1234 null, WINTER - SOEN6340 null,
+Logged request date: 10/15/2018 23:00 | Request type: Add a course | Server response: A new course SOEN13434 has been added for WINTER semester
+Logged request date: 10/15/2018 23:00 | Request type: List course availability | Server response:  WINTER - COMP1234 2, WINTER - INSE1234 2, WINTER - SOEN1234 2,

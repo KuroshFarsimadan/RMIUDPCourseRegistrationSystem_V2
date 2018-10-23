@@ -1,0 +1,12 @@
+
+SOEN
+	- RMI server starts at 8080
+	- UDP server starts at 8081
+
+INSE
+	- RMI server starts at 9090
+	- UDP server starts at 9091
+	
+COMP
+	- RMI server starts at 10010
+	- UDP server starts at 10011
